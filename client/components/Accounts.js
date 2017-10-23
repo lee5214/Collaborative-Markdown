@@ -1,9 +1,9 @@
 import React,{Component} from 'react'
 import ReactDom from 'react-dom'
 import {Template} from 'meteor/templating'
+//work with third party render lib -- Blaze
 import {Blaze} from 'meteor/blaze'
 
-//work with third party render lib -- Blaze
 class Accounts extends Component{
   componentDidMount(){
     this.view = Blaze.render(Template.loginButtons,ReactDom.findDOMNode(this.refs.container))
@@ -13,7 +13,7 @@ class Accounts extends Component{
   }
   render(){
     return(
-      <div ref={'container'}></div>
+      <div ref={'container'} />
     )
   }
 }

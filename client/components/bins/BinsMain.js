@@ -13,7 +13,7 @@ class BinsMain extends Component {
         <div>Loading...</div>
       )
     }
-    //console.log('received bin project => ',this.props.bin);
+    //console.log('received bin => ',this.props.bin);
     return (
       <div>
         <BinsEditor bin={this.props.bin}/>

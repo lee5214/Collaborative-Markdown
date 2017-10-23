@@ -13,7 +13,6 @@ class BinsShare extends Component {
   }
 
   renderShareList(){
-    console.log ('shared with => ',this.props.bin.sharedWith)
     return this.props.bin.sharedWith.map(email=>{
       return (
         <div key={email}>
@@ -29,6 +28,7 @@ class BinsShare extends Component {
   }
 
   render () {
+    //console.log ('shared with => ',this.props.bin.sharedWith)
     return (
       <footer className={'bins-share'}>
         <div className={'input-group'}>

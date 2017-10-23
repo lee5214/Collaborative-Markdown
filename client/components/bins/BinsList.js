@@ -25,7 +25,7 @@ class BinsList extends Component{
   }
 
   render(){
-    console.log(this.props.bins)
+    console.log('bins => ',this.props.bins)
     return(
       <div>
         <ul className={'list-group'}>
