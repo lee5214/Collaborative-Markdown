@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withTracker } from 'meteor/react-meteor-data';
+import { createContainer } from 'meteor/react-meteor-data';
 import { Bins } from '../../../imports/collections/bins';
 import BinsEditor from './BinsEditor'
 import BinsViewer from './BinsViewer'
@@ -26,9 +26,9 @@ class BinsMain extends Component {
 
 //binId from route was passed to this.props.match.params
 //then use it to fetch the bin obj from collection
-export default withTracker((props) => {
+export default createContainer((props) => {
   const {binId} = props.match.params;
   Meteor.subscribe('bins');
   Meteor.subscribe('sharedBins');
   return {bin: Bins.findOne(binId)};
-})(BinsMain);
+},BinsMain);

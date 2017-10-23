@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-import {withTracker} from 'meteor/react-meteor-data'
+import {createContainer} from 'meteor/react-meteor-data'
 import {Bins} from '../../../imports/collections/bins'
 import {Link} from 'react-router-dom'
 
@@ -36,8 +36,8 @@ class BinsList extends Component{
   }
 }
 
-export default withTracker(()=>{
+export default createContainer(()=>{
   Meteor.subscribe('bins');
   Meteor.subscribe('sharedBins');
   return {bins:Bins.find({}).fetch()}
-})(BinsList)
+},BinsList)
