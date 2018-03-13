@@ -4,6 +4,9 @@
   "scripts": {
     "start": "meteor run"
   },
+  "author": "Cong Li",
+  "license": "ISC",
+  "repository": "github:lee5214/Collaborative-Markdown",
   "dependencies": {
     "babel-runtime": "^6.20.0",
     "bcrypt": "^1.0.3",
